@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="gate-ornament" viewBox="0 0 1200 220" role="img" aria-labelledby="gate-title gate-desc">
+  <title id="gate-title">Arabescos do portão da Casa Decorelas</title>
+  <desc id="gate-desc">Desenho ornamental simétrico inspirado no ferro trabalhado do portão da casa.</desc>
+  <defs>
+    <mask id="reveal-from-center" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="220">
+      <rect id="reveal-panel" x="600" y="0" width="0" height="220" fill="white" />
+    </mask>
+    <g id="gate-linework" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Arco superior do portão -->
+      <path stroke-width="4" d="M28 174 C176 174 264 125 410 96 C498 78 550 96 600 124 C650 96 702 78 790 96 C936 125 1024 174 1172 174" />
+      <path stroke-width="2.2" d="M28 188 C176 188 268 139 414 110 C498 93 552 110 600 137 C648 110 702 93 786 110 C932 139 1024 188 1172 188" />
+
+      <!-- Hastes e remates do ferro -->
+      <path stroke-width="3" d="M600 124 V33 C600 18 612 12 622 17 C634 24 631 41 620 45 C613 47 608 42 611 36" />
+      <path stroke-width="2.8" d="M514 93 V61 C514 49 524 42 534 46 C544 51 542 64 533 67 C527 69 523 64 526 59" />
+      <path stroke-width="2.8" d="M686 93 V61 C686 49 676 42 666 46 C656 51 658 64 667 67 C673 69 677 64 674 59" />
+      <path stroke-width="2.5" d="M365 106 V81 C365 70 374 64 383 68 C393 72 391 85 382 88 C376 90 372 85 375 80" />
+      <path stroke-width="2.5" d="M835 106 V81 C835 70 826 64 817 68 C807 72 809 85 818 88 C824 90 828 85 825 80" />
+      <path stroke-width="2.3" d="M214 151 V128 C214 117 223 111 232 115 C242 119 240 132 231 135 C225 137 221 132 224 127" />
+      <path stroke-width="2.3" d="M986 151 V128 C986 117 977 111 968 115 C958 119 960 132 969 135 C975 137 979 132 976 127" />
+
+      <!-- Volutas centrais inspiradas nos arabescos do portão -->
+      <path stroke-width="3.2" d="M600 126 C579 107 555 101 539 108 C521 116 522 136 538 141 C552 145 563 132 555 123 C550 117 540 120 541 127" />
+      <path stroke-width="3.2" d="M600 126 C621 107 645 101 661 108 C679 116 678 136 662 141 C648 145 637 132 645 123 C650 117 660 120 659 127" />
+      <path stroke-width="2.6" d="M512 119 C489 111 470 116 465 130 C460 143 473 152 484 145 C493 139 489 128 481 129 C476 130 475 135 479 137" />
+      <path stroke-width="2.6" d="M688 119 C711 111 730 116 735 130 C740 143 727 152 716 145 C707 139 711 128 719 129 C724 130 725 135 721 137" />
+
+      <!-- Pequenos arabescos laterais -->
+      <path stroke-width="2.7" d="M405 127 C386 117 368 119 362 131 C356 144 369 152 379 145 C387 139 383 129 376 130 C372 131 371 135 374 138" />
+      <path stroke-width="2.7" d="M795 127 C814 117 832 119 838 131 C844 144 831 152 821 145 C813 139 817 129 824 130 C828 131 829 135 826 138" />
+      <path stroke-width="2.4" d="M284 151 C267 144 251 147 247 158 C243 169 254 175 263 169 C270 164 266 156 260 157" />
+      <path stroke-width="2.4" d="M916 151 C933 144 949 147 953 158 C957 169 946 175 937 169 C930 164 934 156 940 157" />
+    </g>
+  </defs>
+
+  <g color="#3d2b20" opacity="0.2" aria-hidden="true">
+    <use href="#gate-linework" />
+  </g>
+  <g color="#3d2b20" mask="url(#reveal-from-center)" aria-hidden="true">
+    <use href="#gate-linework" />
+  </g>
+
+  <style>
+    #reveal-panel { transition: x 700ms cubic-bezier(.2,.75,.25,1), width 700ms cubic-bezier(.2,.75,.25,1); }
+    .gate-ornament:hover #reveal-panel,
+    .gate-ornament:focus #reveal-panel { x: 0; width: 1200px; }
+    @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+      #reveal-panel { x: 0; width: 1200px; transition: none; }
+    }
+  </style>
+</svg>
