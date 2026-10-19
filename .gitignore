@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Arquivos tempor�rios
+*.tmp
+*.log
+
+# Node, caso seja usado futuramente
+node_modules/
+/assets/img/drive-download-20261016T172345Z-1-001/
