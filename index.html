@@ -3,8 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Decorelas Casa de Campo — uma apresentação visual da casa e de seus ambientes.">
-    <title>Decorelas Casa de Campo</title>
+    <meta name="description" content="Conheça a Casa de Campo Decorelas: arquitetura, luz natural e ambientes feitos para desacelerar.">
+    <meta name="theme-color" content="#f3e9dc">
+    <title>A casa | Decorelas Casa de Campo</title>
+    <link rel="canonical" href="https://maicon-oliveira-dev.github.io/casa_de_campo_V1/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A casa | Decorelas Casa de Campo">
+    <meta property="og:description" content="Conheça a Casa de Campo Decorelas: arquitetura, luz natural e ambientes feitos para desacelerar.">
+    <meta property="og:url" content="https://maicon-oliveira-dev.github.io/casa_de_campo_V1/">
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -17,18 +23,18 @@
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header class="site-header">
         <div class="container site-header__inner">
-            <a class="site-brand" href="#inicio" aria-label="Decorelas Casa de Campo — ir para o início">
+            <a class="site-brand" href="index.html" aria-label="Decorelas Casa de Campo — página inicial">
                 <span class="site-brand__name">Decorelas</span>
                 <span class="site-brand__subtitle">Casa de Campo</span>
             </a>
             <nav class="site-nav" aria-label="Navegação principal">
                 <ul class="site-nav__list">
-                    <li><a class="site-nav__link" href="#casa">A casa</a></li>
-                    <li><a class="site-nav__link" href="#ambientes">Ambientes</a></li>
-                    <li><a class="site-nav__link" href="#galeria">Galeria</a></li>
-                    <li><a class="site-nav__cta" href="#reservas">Reservas</a></li>
+                    <li><a class="site-nav__link" href="index.html" aria-current="page">A casa</a></li>
+                    <li><a class="site-nav__link" href="ambientes.html">Ambientes</a></li>
+                    <li><a class="site-nav__link" href="galeria.html">Galeria</a></li>
+                    <li><a class="site-nav__cta" href="reservas.html">Reservas</a></li>
                 </ul>
-                <a class="header-ornament" href="#inicio" aria-label="Decorelas Casa de Campo — ir para o início">
+                <a class="header-ornament" href="index.html" aria-label="Decorelas — voltar à página inicial">
                     <img src="assets/img/brand/decorelas-portao-menu.svg" alt="" width="1200" height="220">
                 </a>
             </nav>
@@ -38,30 +44,33 @@
         </div>
         <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" hidden>
             <div class="container mobile-menu__inner"><ul class="mobile-menu__list">
-                <li><a class="mobile-menu__link" href="#casa">A casa</a></li><li><a class="mobile-menu__link" href="#ambientes">Ambientes</a></li><li><a class="mobile-menu__link" href="#galeria">Galeria</a></li><li><a class="mobile-menu__link" href="#reservas">Reservas</a></li>
+                <li><a class="mobile-menu__link" href="index.html" aria-current="page">A casa</a></li>
+                <li><a class="mobile-menu__link" href="ambientes.html">Ambientes</a></li>
+                <li><a class="mobile-menu__link" href="galeria.html">Galeria</a></li>
+                <li><a class="mobile-menu__link" href="reservas.html">Reservas</a></li>
             </ul></div>
         </nav>
     </header>
     <main id="main-content" tabindex="-1">
-        <section class="hero" id="inicio" aria-labelledby="inicio-title">
+<section class="hero" id="inicio" aria-labelledby="inicio-title">
             <div class="hero-carousel" role="region" aria-roledescription="carrossel" aria-label="Imagens de destaque da casa" tabindex="0">
                 <div class="hero-carousel__slides">
                     <figure class="hero-carousel__slide is-active" id="hero-slide-1" aria-hidden="false" data-hero-title="Um convite a desacelerar." data-hero-description="Troque a pressa por dias vividos com mais calma." data-hero-link-label="Conheça a casa" data-hero-link-target="#casa">
                         <img src="assets/img/hero/hero-01.jpg" alt="Fachada frontal da casa com portão de ferro e muro de pedra" width="1500" height="1000" fetchpriority="high">
                     </figure>
-                    <figure class="hero-carousel__slide" id="hero-slide-2" aria-hidden="true" data-hero-title="A chegada já muda o ritmo." data-hero-description="Deixe a rotina para trás e aproveite cada momento." data-hero-link-label="Explore os ambientes" data-hero-link-target="#ambientes">
+                    <figure class="hero-carousel__slide" id="hero-slide-2" aria-hidden="true" data-hero-title="A chegada já muda o ritmo." data-hero-description="Deixe a rotina para trás e aproveite cada momento." data-hero-link-label="Explore os ambientes" data-hero-link-target="ambientes.html">
                         <img src="assets/img/hero/hero-02.jpg" alt="Varanda da casa com jardim, cobertura e cadeira de madeira" width="1500" height="1000" loading="lazy">
                     </figure>
-                    <figure class="hero-carousel__slide" id="hero-slide-3" aria-hidden="true" data-hero-title="Quando o fogo acende, o tempo desacelera." data-hero-description="Um convite para ficar mais um pouco e apreciar o momento." data-hero-link-label="Ver a galeria" data-hero-link-target="#galeria">
+                    <figure class="hero-carousel__slide" id="hero-slide-3" aria-hidden="true" data-hero-title="Quando o fogo acende, o tempo desacelera." data-hero-description="Um convite para ficar mais um pouco e apreciar o momento." data-hero-link-label="Ver a galeria" data-hero-link-target="galeria.html">
                         <img src="assets/img/hero/hero-03.jpg" alt="Área externa com poltronas de madeira, fogo aceso e banheira de hidromassagem" width="1500" height="1000" loading="lazy">
                     </figure>
-                    <figure class="hero-carousel__slide" id="hero-slide-4" aria-hidden="true" data-hero-title="Sua pausa merece esse cenário." data-hero-description="Um momento para relaxar e aproveitar o tempo." data-hero-link-label="Consultar reservas" data-hero-link-target="#reservas">
+                    <figure class="hero-carousel__slide" id="hero-slide-4" aria-hidden="true" data-hero-title="Sua pausa merece esse cenário." data-hero-description="Um momento para relaxar e aproveitar o tempo." data-hero-link-label="Consultar reservas" data-hero-link-target="reservas.html">
                         <img src="assets/img/hero/hero-04.jpg" alt="Área externa com poltronas de madeira, fogo aceso e muro de pedra" width="1500" height="1000" loading="lazy">
                     </figure>
                 </div>
                 <p class="visually-hidden" role="status" aria-live="polite" aria-atomic="true" data-carousel-status></p>
                 <div class="hero-carousel__controls" aria-label="Controles do carrossel">
-                    <button class="hero-carousel__button hero-carousel__toggle" type="button" data-carousel-toggle aria-label="Pausar apresenta??o autom?tica" hidden>?</button>
+                    <button class="hero-carousel__button hero-carousel__toggle" type="button" data-carousel-toggle aria-label="Pausar apresentação automática" hidden>Ⅱ</button>
                     <button class="hero-carousel__button" type="button" data-carousel-previous aria-label="Imagem anterior">←</button>
                     <div class="hero-carousel__dots" role="group" aria-label="Escolher imagem de destaque">
                         <button class="is-active" type="button" aria-current="true" aria-controls="hero-slide-1" data-carousel-dot="0"><span class="visually-hidden">Ir para o slide 1</span></button>
@@ -80,38 +89,39 @@
                 <div class="hero__actions"><a class="button button--light" href="#casa" data-hero-link>Conheça a casa</a></div>
             </div>
         </section>
-
         <section class="intro section" id="casa" aria-labelledby="casa-title">
-            <div class="container intro__grid"><p class="eyebrow">A casa</p><div>
-                <h2 id="casa-title">Uma presença serena, feita de matéria e memória.</h2>
-                <p class="intro__text">A Decorelas se revela aos poucos: no contraste entre madeira, pedra, luz e o desenho dos ambientes.</p>
-                <!-- Localização, capacidade, comodidades e regras serão adicionadas após confirmação dos proprietários. -->
-            </div></div>
-        </section>
-
-        <section class="spaces section" id="ambientes" aria-labelledby="ambientes-title">
-            <div class="container"><div class="section-heading"><p class="eyebrow">Ambientes</p><h2 id="ambientes-title">Cenas para habitar sem pressa.</h2></div>
-                <div class="spaces__grid">
-                    <article class="space-card space-card--wide"><img src="assets/img/gallery/cozinha.jpg" alt="Cozinha da casa com janela ampla, armários e bancada" width="1200" height="800" loading="lazy"><div><h3>Cozinha</h3><p>Linhas acolhedoras e luz que atravessa o dia.</p></div></article>
-                    <article class="space-card"><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama de estrutura escura e janela voltada ao exterior" width="900" height="600" loading="lazy"><div><h3>Quarto</h3><p>Um enquadramento calmo entre interior e paisagem.</p></div></article>
-                    <article class="space-card"><img src="assets/img/gallery/sala.jpg" alt="Sala com sofá claro, tapete de fibra e luz natural" width="667" height="1000" loading="lazy"><div><h3>Sala</h3><p>Texturas naturais para desacelerar o olhar.</p></div></article>
-                    <article class="space-card space-card--wide"><img src="assets/img/details/area-externa.jpg" alt="Detalhe de área externa com pedra, madeira e água" width="1200" height="800" loading="lazy"><div><h3>Área externa</h3><p>Um detalhe da casa que aproxima matéria e paisagem.</p></div></article>
+            <div class="container intro__grid">
+                <p class="eyebrow">A casa</p>
+                <div>
+                    <h2 id="casa-title">Um lugar onde a beleza convida a ficar.</h2>
+                    <p class="intro__text">Entre madeira, pedra e luz natural, cada ambiente revela um cuidado que se percebe nos detalhes. A casa foi pensada para transformar uma pausa em lembrança.</p>
+                    <a class="text-link" href="ambientes.html">Conheça os ambientes <span aria-hidden="true">↗</span></a>
                 </div>
-                <!-- A curadoria final de ambientes será concluída após confirmação dos proprietários. -->
             </div>
         </section>
-
-        <section class="gallery section" id="galeria" aria-labelledby="galeria-title">
-            <div class="container gallery__header"><p class="eyebrow">Galeria</p><h2 id="galeria-title">A casa em sua própria cadência.</h2><p>Uma coleção de registros para percorrer devagar.</p></div>
-            <div class="container gallery__grid">
-                <figure class="gallery__feature"><img src="assets/img/gallery/jardim.jpg" alt="Jardim com cadeiras de madeira, gramado e vista para a paisagem" width="1200" height="800" loading="lazy"></figure>
-                <figure><img src="assets/img/gallery/sala.jpg" alt="Sala iluminada com sofá claro e tapete de fibra" width="667" height="1000" loading="lazy"></figure>
-                <figure><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama, luminária e janela para o exterior" width="900" height="600" loading="lazy"></figure>
+        <section class="home-explore section" aria-labelledby="home-explore-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Descubra a Decorelas</p>
+                    <h2 id="home-explore-title">Cada detalhe merece ser visto de perto.</h2>
+                </div>
+                <div class="home-explore__grid">
+                    <a class="home-explore__card" href="ambientes.html">
+                        <img src="assets/img/gallery/cozinha.jpg" alt="" width="1200" height="800" loading="lazy">
+                        <span class="home-explore__label"><span>Ambientes</span><span aria-hidden="true">↗</span></span>
+                    </a>
+                    <a class="home-explore__card" href="galeria.html">
+                        <img src="assets/img/gallery/jardim.jpg" alt="" width="1200" height="800" loading="lazy">
+                        <span class="home-explore__label"><span>Galeria</span><span aria-hidden="true">↗</span></span>
+                    </a>
+                    <a class="home-explore__card home-explore__card--booking" href="reservas.html">
+                        <span class="eyebrow">Sua próxima pausa</span>
+                        <span class="home-explore__label"><span>Reservas</span><span aria-hidden="true">↗</span></span>
+                    </a>
+                </div>
             </div>
         </section>
-
-        <section class="reservations section" id="reservas" aria-labelledby="reservas-title"><div class="container reservations__inner"><p class="eyebrow">Reservas</p><h2 id="reservas-title">Quando quiser saber mais, estamos por aqui.</h2><p>Consulte a disponibilidade e receba as informações da sua próxima estadia.</p><!-- Integração com canal oficial de reservas será inserida após confirmação dos proprietários. --></div></section>
     </main>
-    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><a class="site-footer__note" href="index.html">Um convite a desacelerar.</a></div></footer>
 </body>
 </html>

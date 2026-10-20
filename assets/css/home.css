@@ -75,3 +75,87 @@
 @media (prefers-reduced-motion: reduce) {
     .hero-carousel__slide { transition: none; }
 }
+
+/* Navegação entre páginas */
+.site-nav__link[aria-current="page"] { color: var(--color-ink); }
+.site-nav__link[aria-current="page"]::after {
+    display: block;
+    width: 1.5rem;
+    height: 1px;
+    margin: .3rem auto 0;
+    background: var(--color-terracotta);
+    content: "";
+}
+.site-nav__cta[aria-current="page"] { color: var(--color-terracotta); }
+.mobile-menu__link[aria-current="page"] { color: var(--color-terracotta); }
+
+/* Páginas internas */
+.page-masthead {
+    position: relative;
+    display: grid;
+    min-height: clamp(25rem, 58vw, 43rem);
+    align-items: end;
+    overflow: hidden;
+    color: var(--color-surface);
+    background: var(--color-ink);
+}
+.page-masthead__image, .page-masthead__veil { position: absolute; inset: 0; width: 100%; height: 100%; }
+.page-masthead__image { object-fit: cover; }
+.page-masthead__veil { background: linear-gradient(90deg, rgba(47,29,19,.72), rgba(47,29,19,.2) 75%), linear-gradient(0deg, rgba(47,29,19,.42), transparent 70%); }
+.page-masthead__content { position: relative; z-index: 1; padding-block: clamp(4rem, 10vw, 7rem); }
+.page-masthead__content h1 { max-width: 11ch; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 400; line-height: .98; text-shadow: 0 3px 18px rgba(24,13,8,.35); }
+.page-intro { background: var(--color-surface); }
+.page-intro__inner { display: grid; gap: var(--space-4); max-width: 62rem; }
+.page-intro__inner h2 { max-width: 15ch; font-size: clamp(2.3rem, 5vw, 4.4rem); font-weight: 400; line-height: 1.03; }
+.page-intro__inner > p:last-child { max-width: 40rem; color: var(--color-ink-muted); font-size: var(--text-lg); line-height: 1.7; }
+.spaces .section-heading { margin-bottom: var(--space-6); }
+.spaces .space-card h2 { font-size: var(--text-xl); font-weight: 400; line-height: 1.05; }
+.space-card .eyebrow { margin-bottom: var(--space-2); color: var(--color-terracotta); font-size: .68rem; }
+.text-link { display: inline-flex; align-items: center; gap: .7rem; width: fit-content; margin-top: var(--space-5); padding-bottom: .3rem; border-bottom: 1px solid var(--color-terracotta); font-family: var(--font-display); font-size: var(--text-lg); }
+.text-link:hover { color: var(--color-terracotta); }
+.home-explore__grid { display: grid; gap: var(--space-4); }
+.home-explore__card { position: relative; display: flex; min-height: 18rem; flex-direction: column; justify-content: space-between; overflow: hidden; background: var(--color-ink); color: var(--color-surface); }
+.home-explore__card::after { position: absolute; inset: 35% 0 0; background: linear-gradient(0deg, rgba(35,23,16,.78), transparent); content: ""; }
+.home-explore__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms ease; }
+.home-explore__card:hover img { transform: scale(1.035); }
+.home-explore__label, .home-explore__card > .eyebrow { position: relative; z-index: 1; }
+.home-explore__label { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: auto; padding: var(--space-5); font-family: var(--font-display); font-size: var(--text-xl); }
+.home-explore__card--booking { min-height: 14rem; padding: var(--space-5); background: var(--color-terracotta); }
+.home-explore__card--booking::after { display: none; }
+.home-explore__card--booking .home-explore__label { padding: 0; }
+.page-next { background: var(--color-terracotta); color: var(--color-surface); }
+.page-next--dark { background: var(--color-ink); }
+.page-next__inner { display: grid; justify-items: start; gap: var(--space-4); }
+.page-next__inner h2 { max-width: 18ch; font-size: clamp(2.25rem, 5vw, 4.5rem); font-weight: 400; line-height: 1.02; }
+.page-next__inner .button { margin-top: var(--space-3); }
+.gallery-wall { background: var(--color-canvas); }
+.gallery-wall__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+.gallery-wall__item { position: relative; min-height: 18rem; margin: 0; overflow: hidden; background: var(--color-surface-raised); }
+.gallery-wall__item img { width: 100%; height: 100%; min-height: 18rem; object-fit: cover; transition: transform 700ms ease; }
+.gallery-wall__item:hover img { transform: scale(1.025); }
+.gallery-wall__item figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 3rem var(--space-4) var(--space-4); color: var(--color-surface); background: linear-gradient(transparent, rgba(35,23,16,.7)); font-family: var(--font-display); font-size: var(--text-lg); }
+.booking { background: var(--color-surface); }
+.booking__grid { display: grid; gap: var(--space-6); }
+.booking__grid > div h2 { max-width: 12ch; font-size: clamp(2.6rem, 6vw, 5.5rem); font-weight: 400; line-height: 1; }
+.booking__grid > div > p:not(.eyebrow) { max-width: 35rem; margin-top: var(--space-5); color: var(--color-ink-muted); font-size: var(--text-lg); line-height: 1.7; }
+.booking__card { padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--color-border); background: var(--color-canvas); }
+.booking__card h2 { font-size: var(--text-xl); font-weight: 400; line-height: 1.1; }
+.booking__card > p:not(.eyebrow) { margin-top: var(--space-4); color: var(--color-ink-muted); line-height: 1.7; }
+.booking__card .text-link { font-size: 1rem; }
+
+@media (min-width: 48rem) {
+    .page-intro__inner { grid-template-columns: 1fr 2fr; column-gap: var(--space-6); }
+    .page-intro__inner .eyebrow { grid-column: 1; }
+    .page-intro__inner h2, .page-intro__inner > p:last-child { grid-column: 2; }
+    .page-intro__inner h2 { grid-row: 1 / span 2; }
+    .home-explore__grid { grid-template-columns: repeat(2, 1fr); }
+    .home-explore__card:first-child { grid-row: span 2; min-height: 30rem; }
+    .home-explore__card--booking { min-height: 14rem; }
+    .gallery-wall__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(18rem, 26vw); }
+    .gallery-wall__item--tall { grid-row: span 2; }
+    .gallery-wall__item--wide { grid-column: span 2; }
+    .booking__grid { grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .home-explore__card img, .gallery-wall__item img { transition: none; }
+}
