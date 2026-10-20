@@ -21,8 +21,8 @@
     let focusInside = false;
 
     function updateToggle() {
-        toggle.textContent = paused ? "?" : "?";
-        toggle.setAttribute("aria-label", paused ? "Retomar apresenta??o autom?tica" : "Pausar apresenta??o autom?tica");
+        toggle.textContent = paused ? "▶" : "Ⅱ";
+        toggle.setAttribute("aria-label", paused ? "Retomar apresentação automática" : "Pausar apresentação automática");
     }
     function scheduleRotation() {
         clearTimeout(timer);

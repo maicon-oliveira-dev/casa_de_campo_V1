@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Decorelas Casa de Campo — uma apresentação visual da casa e de seus ambientes.">
+    <title>Galeria | Decorelas Casa de Campo</title>
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                <span class="site-brand__name">Decorelas</span>
+                <span class="site-brand__subtitle">Casa de Campo</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="index.html">A casa</a></li>
+                    <li><a class="site-nav__link" href="ambientes.html">Ambientes</a></li>
+                    <li><a class="site-nav__link" href="galeria.html" aria-current="page">Galeria</a></li>
+                    <li><a class="site-nav__cta" href="reservas.html">Reservas</a></li>
+                </ul>
+                <a class="header-ornament" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                    <img src="assets/img/brand/decorelas-portao-menu.svg" alt="" width="1200" height="220">
+                </a>
+            </nav>
+            <button class="menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="menu-button__icon" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" hidden>
+            <div class="container mobile-menu__inner"><ul class="mobile-menu__list">
+                <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html" aria-current="page">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html">Reservas</a></li>
+            </ul></div>
+        </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <section class="gallery section" id="galeria" aria-labelledby="galeria-title">
+            <div class="container gallery__header"><p class="eyebrow">Galeria</p><h1 id="galeria-title">A casa em sua própria cadência.</h1><p>Uma coleção de registros para percorrer devagar.</p></div>
+            <div class="container gallery__grid">
+                <figure class="gallery__feature"><img src="assets/img/gallery/jardim.jpg" alt="Jardim com cadeiras de madeira, gramado e vista para a paisagem" width="1200" height="800" loading="lazy"></figure>
+                <figure><img src="assets/img/gallery/sala.jpg" alt="Sala iluminada com sofá claro e tapete de fibra" width="667" height="1000" loading="lazy"></figure>
+                <figure><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama, luminária e janela para o exterior" width="900" height="600" loading="lazy"></figure>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+</body>
+</html>

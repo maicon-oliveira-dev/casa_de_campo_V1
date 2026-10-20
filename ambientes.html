@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Decorelas Casa de Campo — uma apresentação visual da casa e de seus ambientes.">
+    <title>Ambientes | Decorelas Casa de Campo</title>
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                <span class="site-brand__name">Decorelas</span>
+                <span class="site-brand__subtitle">Casa de Campo</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="index.html">A casa</a></li>
+                    <li><a class="site-nav__link" href="ambientes.html" aria-current="page">Ambientes</a></li>
+                    <li><a class="site-nav__link" href="galeria.html">Galeria</a></li>
+                    <li><a class="site-nav__cta" href="reservas.html">Reservas</a></li>
+                </ul>
+                <a class="header-ornament" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                    <img src="assets/img/brand/decorelas-portao-menu.svg" alt="" width="1200" height="220">
+                </a>
+            </nav>
+            <button class="menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="menu-button__icon" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" hidden>
+            <div class="container mobile-menu__inner"><ul class="mobile-menu__list">
+                <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html" aria-current="page">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html">Reservas</a></li>
+            </ul></div>
+        </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <section class="spaces section" id="ambientes" aria-labelledby="ambientes-title">
+            <div class="container"><div class="section-heading"><p class="eyebrow">Ambientes</p><h1 id="ambientes-title">Cenas para habitar sem pressa.</h1></div>
+                <div class="spaces__grid">
+                    <article class="space-card space-card--wide"><img src="assets/img/gallery/cozinha.jpg" alt="Cozinha da casa com janela ampla, armários e bancada" width="1200" height="800" loading="lazy"><div><h3>Cozinha</h3><p>Linhas acolhedoras e luz que atravessa o dia.</p></div></article>
+                    <article class="space-card"><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama de estrutura escura e janela voltada ao exterior" width="900" height="600" loading="lazy"><div><h3>Quarto</h3><p>Um enquadramento calmo entre interior e paisagem.</p></div></article>
+                    <article class="space-card"><img src="assets/img/gallery/sala.jpg" alt="Sala com sofá claro, tapete de fibra e luz natural" width="667" height="1000" loading="lazy"><div><h3>Sala</h3><p>Texturas naturais para desacelerar o olhar.</p></div></article>
+                    <article class="space-card space-card--wide"><img src="assets/img/details/area-externa.jpg" alt="Detalhe de área externa com pedra, madeira e água" width="1200" height="800" loading="lazy"><div><h3>Área externa</h3><p>Um detalhe da casa que aproxima matéria e paisagem.</p></div></article>
+                </div>
+                <!-- A curadoria final de ambientes será concluída após confirmação dos proprietários. -->
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+</body>
+</html>

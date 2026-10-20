@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Decorelas Casa de Campo — uma apresentação visual da casa e de seus ambientes.">
+    <title>Reservas | Decorelas Casa de Campo</title>
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-brand" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                <span class="site-brand__name">Decorelas</span>
+                <span class="site-brand__subtitle">Casa de Campo</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="index.html">A casa</a></li>
+                    <li><a class="site-nav__link" href="ambientes.html">Ambientes</a></li>
+                    <li><a class="site-nav__link" href="galeria.html">Galeria</a></li>
+                    <li><a class="site-nav__cta" href="reservas.html" aria-current="page">Reservas</a></li>
+                </ul>
+                <a class="header-ornament" href="index.html" aria-label="Decorelas Casa de Campo — ir para o início">
+                    <img src="assets/img/brand/decorelas-portao-menu.svg" alt="" width="1200" height="220">
+                </a>
+            </nav>
+            <button class="menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="menu-button__icon" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel" hidden>
+            <div class="container mobile-menu__inner"><ul class="mobile-menu__list">
+                <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html" aria-current="page">Reservas</a></li>
+            </ul></div>
+        </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <section class="reservations section" id="reservas" aria-labelledby="reservas-title"><div class="container reservations__inner"><p class="eyebrow">Reservas</p><h1 id="reservas-title">Quando quiser saber mais, estamos por aqui.</h1><p>Consulte a disponibilidade e receba as informações da sua próxima estadia.</p><!-- Integração com canal oficial de reservas será inserida após confirmação dos proprietários. --></div></section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+</body>
+</html>
