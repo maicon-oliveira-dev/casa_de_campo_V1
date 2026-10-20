@@ -391,6 +391,108 @@
   color: var(--color-terracotta);
 }
 
+.home-footer__body {
+  background: #f8f3e6 url("../img/details/faixa-footer.webp") right center / cover no-repeat;
+  color: var(--color-ink);
+}
+
+.home-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding-block: clamp(4rem, 8vw, 7rem);
+  text-align: center;
+}
+
+.home-footer__brand::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 1px;
+  margin: var(--space-5) auto 0;
+  background: var(--color-terracotta);
+}
+
+.home-footer__subtitle {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.home-footer__name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1;
+}
+
+.home-footer__message {
+  max-width: 32rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  line-height: 1.4;
+}
+
+.home-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.home-footer__social button,
+.home-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  letter-spacing: .08em;
+}
+
+.home-footer__social svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: none;
+}
+
+.home-footer__social a:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.home-footer__social button:disabled {
+  opacity: .7;
+  cursor: default;
+}
+
+.home-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-5);
+  list-style: none;
+}
+
+.home-footer__nav a {
+  display: inline-block;
+  padding-block: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+}
+
+.home-footer__nav a:hover {
+  color: var(--color-terracotta);
+}
+
 .section-heading {
   margin-bottom: var(--space-6);
 }
