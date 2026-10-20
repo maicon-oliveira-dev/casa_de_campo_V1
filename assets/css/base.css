@@ -9,6 +9,10 @@ html {
     scroll-padding-top: 5rem;
 }
 
+@media (min-width: 64rem) {
+    html { scroll-padding-top: 8rem; }
+}
+
 body {
     min-width: 20rem;
     min-height: 100vh;

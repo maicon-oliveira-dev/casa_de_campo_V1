@@ -1,35 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="gate-ornament" viewBox="0 0 1200 220" role="img" aria-labelledby="gate-title gate-desc">
-  <title id="gate-title">Arabescos do portão da Casa Decorelas</title>
-  <desc id="gate-desc">Desenho ornamental simétrico inspirado no ferro trabalhado do portão da casa.</desc>
+  <title id="gate-title">Detalhe do portão da Casa Decorelas</title>
+  <desc id="gate-desc">Arco de ferro trabalhado com haste central e volutas simétricas, inspirado no portão da casa.</desc>
   <defs>
     <mask id="reveal-from-center" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="220">
       <rect id="reveal-panel" x="600" y="0" width="0" height="220" fill="white" />
     </mask>
     <g id="gate-linework" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Arco superior do portão -->
-      <path stroke-width="4" d="M28 174 C176 174 264 125 410 96 C498 78 550 96 600 124 C650 96 702 78 790 96 C936 125 1024 174 1172 174" />
-      <path stroke-width="2.2" d="M28 188 C176 188 268 139 414 110 C498 93 552 110 600 137 C648 110 702 93 786 110 C932 139 1024 188 1172 188" />
+      <!-- Duas barras do arco superior, elevando-se suavemente até o centro. -->
+      <path stroke-width="3.4" d="M44 173 C230 172 388 135 530 97 C558 89 581 83 600 78 C619 83 642 89 670 97 C812 135 970 172 1156 173" />
+      <path stroke-width="2" d="M44 187 C231 186 390 150 533 112 C560 105 583 99 600 95 C617 99 640 105 667 112 C810 150 969 186 1156 187" />
 
-      <!-- Hastes e remates do ferro -->
-      <path stroke-width="3" d="M600 124 V33 C600 18 612 12 622 17 C634 24 631 41 620 45 C613 47 608 42 611 36" />
-      <path stroke-width="2.8" d="M514 93 V61 C514 49 524 42 534 46 C544 51 542 64 533 67 C527 69 523 64 526 59" />
-      <path stroke-width="2.8" d="M686 93 V61 C686 49 676 42 666 46 C656 51 658 64 667 67 C673 69 677 64 674 59" />
-      <path stroke-width="2.5" d="M365 106 V81 C365 70 374 64 383 68 C393 72 391 85 382 88 C376 90 372 85 375 80" />
-      <path stroke-width="2.5" d="M835 106 V81 C835 70 826 64 817 68 C807 72 809 85 818 88 C824 90 828 85 825 80" />
-      <path stroke-width="2.3" d="M214 151 V128 C214 117 223 111 232 115 C242 119 240 132 231 135 C225 137 221 132 224 127" />
-      <path stroke-width="2.3" d="M986 151 V128 C986 117 977 111 968 115 C958 119 960 132 969 135 C975 137 979 132 976 127" />
+      <!-- Hastes do portão: dupla central com volutas externas e remates laterais. -->
+      <path stroke-width="3" d="M594 96 V18" />
+      <path stroke-width="3" d="M606 96 V18" />
+      <path stroke-width="3" d="M594 27 C580 17 563 20 560 32 C557 43 568 50 577 44 C583 40 581 32 575 32 C570 32 569 38 573 40" />
+      <path stroke-width="3" d="M606 27 C620 17 637 20 640 32 C643 43 632 50 623 44 C617 40 619 32 625 32 C630 32 631 38 627 40" />
+      <path stroke-width="2.6" d="M439 123 V84 C439 76 431 71 423 74 C414 78 415 90 423 93 C429 96 434 90 431 85 C429 81 424 81 423 85" />
+      <path stroke-width="2.6" d="M761 123 V84 C761 76 769 71 777 74 C786 78 785 90 777 93 C771 96 766 90 769 85 C771 81 776 81 777 85" />
+      <path stroke-width="2.4" d="M330 148 V116 C330 108 322 103 315 106 C307 110 308 121 315 124 C321 127 326 122 323 117 C321 113 316 113 315 117" />
+      <path stroke-width="2.4" d="M870 148 V116 C870 108 878 103 885 106 C893 110 892 121 885 124 C879 127 874 122 877 117 C879 113 884 113 885 117" />
 
-      <!-- Volutas centrais inspiradas nos arabescos do portão -->
-      <path stroke-width="3.2" d="M600 126 C579 107 555 101 539 108 C521 116 522 136 538 141 C552 145 563 132 555 123 C550 117 540 120 541 127" />
-      <path stroke-width="3.2" d="M600 126 C621 107 645 101 661 108 C679 116 678 136 662 141 C648 145 637 132 645 123 C650 117 660 120 659 127" />
-      <path stroke-width="2.6" d="M512 119 C489 111 470 116 465 130 C460 143 473 152 484 145 C493 139 489 128 481 129 C476 130 475 135 479 137" />
-      <path stroke-width="2.6" d="M688 119 C711 111 730 116 735 130 C740 143 727 152 716 145 C707 139 711 128 719 129 C724 130 725 135 721 137" />
-
-      <!-- Pequenos arabescos laterais -->
-      <path stroke-width="2.7" d="M405 127 C386 117 368 119 362 131 C356 144 369 152 379 145 C387 139 383 129 376 130 C372 131 371 135 374 138" />
-      <path stroke-width="2.7" d="M795 127 C814 117 832 119 838 131 C844 144 831 152 821 145 C813 139 817 129 824 130 C828 131 829 135 826 138" />
-      <path stroke-width="2.4" d="M284 151 C267 144 251 147 247 158 C243 169 254 175 263 169 C270 164 266 156 260 157" />
-      <path stroke-width="2.4" d="M916 151 C933 144 949 147 953 158 C957 169 946 175 937 169 C930 164 934 156 940 157" />
+      <!-- Volutas ligadas à haste central, como no topo do portão original. -->
+      <path stroke-width="3" d="M600 79 C581 90 557 91 544 82 C532 74 534 60 546 57 C557 54 565 62 561 70 C558 75 550 75 549 70" />
+      <path stroke-width="3" d="M600 79 C619 90 643 91 656 82 C668 74 666 60 654 57 C643 54 635 62 639 70 C642 75 650 75 651 70" />
+      <path stroke-width="2.6" d="M523 99 C505 109 485 108 476 99 C468 91 471 80 480 78 C489 76 495 83 491 89 C488 93 482 93 481 89" />
+      <path stroke-width="2.6" d="M677 99 C695 109 715 108 724 99 C732 91 729 80 720 78 C711 76 705 83 709 89 C712 93 718 93 719 89" />
+      <path stroke-width="2.3" d="M440 123 C424 132 407 131 400 123 C393 116 396 106 403 105 C411 103 416 110 412 115 C410 118 405 118 405 114" />
+      <path stroke-width="2.3" d="M760 123 C776 132 793 131 800 123 C807 116 804 106 797 105 C789 103 784 110 788 115 C790 118 795 118 795 114" />
     </g>
   </defs>
 
