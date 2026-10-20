@@ -32,6 +32,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+html:has(body.menu-open) {
+  overflow: hidden;
+}
+
 img,
 picture,
 svg {

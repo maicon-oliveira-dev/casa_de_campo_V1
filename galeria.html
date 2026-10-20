@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/galeria.css">
+    <script src="assets/js/galeria.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
 </head>
@@ -40,17 +42,151 @@
                 <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html" aria-current="page">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html">Reservas</a></li>
             </ul></div>
         </nav>
+        <noscript>
+            <style>.menu-button { display: none; } .hero-carousel__controls { display: none; }</style>
+            <nav class="container no-js-nav" aria-label="Navega&#231;&#227;o principal"><a href="index.html">A casa</a><a href="ambientes.html">Ambientes</a><a href="galeria.html">Galeria</a><a href="reservas.html">Reservas</a></nav>
+        </noscript>
     </header>
     <main id="main-content" tabindex="-1">
-        <section class="gallery section" id="galeria" aria-labelledby="galeria-title">
-            <div class="container gallery__header"><p class="eyebrow">Galeria</p><h1 id="galeria-title">A casa em sua própria cadência.</h1><p>Uma coleção de registros para percorrer devagar.</p></div>
-            <div class="container gallery__grid">
-                <figure class="gallery__feature"><img src="assets/img/gallery/jardim.jpg" alt="Jardim com cadeiras de madeira, gramado e vista para a paisagem" width="1200" height="800" loading="lazy"></figure>
-                <figure><img src="assets/img/gallery/sala.jpg" alt="Sala iluminada com sofá claro e tapete de fibra" width="667" height="1000" loading="lazy"></figure>
-                <figure><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama, luminária e janela para o exterior" width="900" height="600" loading="lazy"></figure>
+        <section class="photo-gallery" id="galeria" aria-labelledby="gallery-title">
+            <div class="container photo-gallery__intro">
+                <p class="eyebrow">Um olhar pela casa</p>
+                <h1 id="gallery-title">Galeria</h1>
+                <p>Uma cole&#231;&#227;o de registros para percorrer devagar.</p>
+            </div>
+            <div class="container photo-gallery__content">
+                <div class="photo-gallery__filter-wrap" hidden>
+                    <div class="photo-gallery__filters" role="group" aria-label="Filtrar fotografias por ambiente">
+                        <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
+                        <button type="button" data-filter="fachada" aria-pressed="false">Fachada e entrada</button>
+                        <button type="button" data-filter="cozinha" aria-pressed="false">Cozinha</button>
+                        <button type="button" data-filter="sala" aria-pressed="false">Sala</button>
+                        <button type="button" data-filter="quarto" aria-pressed="false">Quarto</button>
+                        <button type="button" data-filter="banheiro" aria-pressed="false">Banheiro</button>
+                        <button type="button" data-filter="jardim" aria-pressed="false">Jardim</button>
+                        <button type="button" data-filter="varanda" aria-pressed="false">Varanda</button>
+                        <button type="button" data-filter="paisagem" aria-pressed="false">Paisagem</button>
+                        <button type="button" data-filter="detalhes" aria-pressed="false">Detalhes</button>
+                    </div>
+                    <p class="photo-gallery__hint">Deslize para ver as categorias &#8594;</p>
+                </div>
+                <div class="photo-gallery__grid" id="gallery-grid">
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-01.webp" data-category="jardim" aria-label="Ampliar: Cadeiras de madeira no jardim"><img src="assets/img/galeria/miniaturas/jardim-01.webp" alt="Cadeiras de madeira no jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-02.webp" data-category="jardim" aria-label="Ampliar: Jardim e &#225;rea externa"><img src="assets/img/galeria/miniaturas/jardim-02.webp" alt="Jardim e &#225;rea externa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-03.webp" data-category="jardim" aria-label="Ampliar: Detalhe decorativo no jardim"><img src="assets/img/galeria/miniaturas/jardim-03.webp" alt="Detalhe decorativo no jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-04.webp" data-category="fachada" aria-label="Ampliar: Casa vista da entrada"><img src="assets/img/galeria/miniaturas/fachada-04.webp" alt="Casa vista da entrada" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-05.webp" data-category="fachada" aria-label="Ampliar: Jardim diante da fachada"><img src="assets/img/galeria/miniaturas/fachada-05.webp" alt="Jardim diante da fachada" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-06.webp" data-category="fachada" aria-label="Ampliar: Fachada e varanda da casa"><img src="assets/img/galeria/miniaturas/fachada-06.webp" alt="Fachada e varanda da casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-07.webp" data-category="fachada" aria-label="Ampliar: Port&#227;o de entrada"><img src="assets/img/galeria/miniaturas/fachada-07.webp" alt="Port&#227;o de entrada" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-08.webp" data-category="fachada" aria-label="Ampliar: Caminho de chegada"><img src="assets/img/galeria/miniaturas/fachada-08.webp" alt="Caminho de chegada" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-09.webp" data-category="fachada" aria-label="Ampliar: Vista da casa desde a entrada"><img src="assets/img/galeria/miniaturas/fachada-09.webp" alt="Vista da casa desde a entrada" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-10.webp" data-category="fachada" aria-label="Ampliar: Port&#227;o aberto diante da casa"><img src="assets/img/galeria/miniaturas/fachada-10.webp" alt="Port&#227;o aberto diante da casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-11.webp" data-category="fachada" aria-label="Ampliar: Vista do port&#227;o e da fachada"><img src="assets/img/galeria/miniaturas/fachada-11.webp" alt="Vista do port&#227;o e da fachada" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-12.webp" data-category="fachada" aria-label="Ampliar: Portas da fachada e banco"><img src="assets/img/galeria/miniaturas/fachada-12.webp" alt="Portas da fachada e banco" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-13.webp" data-category="fachada" aria-label="Ampliar: Caminho visto da varanda"><img src="assets/img/galeria/miniaturas/fachada-13.webp" alt="Caminho visto da varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-14.webp" data-category="fachada" aria-label="Ampliar: Jardim visto junto &#224; casa"><img src="assets/img/galeria/miniaturas/fachada-14.webp" alt="Jardim visto junto &#224; casa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-15.webp" data-category="fachada" aria-label="Ampliar: Vista da paisagem junto ao jardim"><img src="assets/img/galeria/miniaturas/fachada-15.webp" alt="Vista da paisagem junto ao jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-16.webp" data-category="varanda" aria-label="Ampliar: Passagem ao lado da casa"><img src="assets/img/galeria/miniaturas/varanda-16.webp" alt="Passagem ao lado da casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-17.webp" data-category="varanda" aria-label="Ampliar: Mesa de madeira na varanda"><img src="assets/img/galeria/miniaturas/varanda-17.webp" alt="Mesa de madeira na varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-18.webp" data-category="varanda" aria-label="Ampliar: Varanda com mesa de madeira"><img src="assets/img/galeria/miniaturas/varanda-18.webp" alt="Varanda com mesa de madeira" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-19.webp" data-category="varanda" aria-label="Ampliar: Mesa e janela da cozinha na varanda"><img src="assets/img/galeria/miniaturas/varanda-19.webp" alt="Mesa e janela da cozinha na varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-20.webp" data-category="varanda" aria-label="Ampliar: Vista lateral da varanda"><img src="assets/img/galeria/miniaturas/varanda-20.webp" alt="Vista lateral da varanda" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-21.webp" data-category="jardim" aria-label="Ampliar: Jardim e cadeiras vistos da varanda"><img src="assets/img/galeria/miniaturas/jardim-21.webp" alt="Jardim e cadeiras vistos da varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-22.webp" data-category="fachada" aria-label="Ampliar: Fachada vista de lado"><img src="assets/img/galeria/miniaturas/fachada-22.webp" alt="Fachada vista de lado" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-23.webp" data-category="cozinha" aria-label="Ampliar: Cozinha com bancada e janela"><img src="assets/img/galeria/miniaturas/cozinha-23.webp" alt="Cozinha com bancada e janela" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-24.webp" data-category="cozinha" aria-label="Ampliar: Bancada da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-24.webp" alt="Bancada da cozinha" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-25.webp" data-category="cozinha" aria-label="Ampliar: Porta e piso da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-25.webp" alt="Porta e piso da cozinha" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-26.webp" data-category="cozinha" aria-label="Ampliar: Porta de entrada da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-26.webp" alt="Porta de entrada da cozinha" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-27.webp" data-category="cozinha" aria-label="Ampliar: Detalhe da cozinha junto &#224; porta"><img src="assets/img/galeria/miniaturas/cozinha-27.webp" alt="Detalhe da cozinha junto &#224; porta" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-28.webp" data-category="cozinha" aria-label="Ampliar: Utens&#237;lios sobre a bancada da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-28.webp" alt="Utens&#237;lios sobre a bancada da cozinha" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-29.webp" data-category="cozinha" aria-label="Ampliar: Pia e janela da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-29.webp" alt="Pia e janela da cozinha" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/cozinha-30.webp" data-category="cozinha" aria-label="Ampliar: Detalhe da pia da cozinha"><img src="assets/img/galeria/miniaturas/cozinha-30.webp" alt="Detalhe da pia da cozinha" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/sala-31.webp" data-category="sala" aria-label="Ampliar: Sala com sof&#225; claro"><img src="assets/img/galeria/miniaturas/sala-31.webp" alt="Sala com sof&#225; claro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/sala-32.webp" data-category="sala" aria-label="Ampliar: Vista da sala e do sof&#225;"><img src="assets/img/galeria/miniaturas/sala-32.webp" alt="Vista da sala e do sof&#225;" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-33.webp" data-category="fachada" aria-label="Ampliar: Caminho de acesso &#224; casa"><img src="assets/img/galeria/miniaturas/fachada-33.webp" alt="Caminho de acesso &#224; casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-34.webp" data-category="fachada" aria-label="Ampliar: Vista do caminho de acesso"><img src="assets/img/galeria/miniaturas/fachada-34.webp" alt="Vista do caminho de acesso" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-35.webp" data-category="varanda" aria-label="Ampliar: Vista lateral da &#225;rea externa"><img src="assets/img/galeria/miniaturas/varanda-35.webp" alt="Vista lateral da &#225;rea externa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-36.webp" data-category="varanda" aria-label="Ampliar: Fachada e &#225;rea externa"><img src="assets/img/galeria/miniaturas/varanda-36.webp" alt="Fachada e &#225;rea externa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-37.webp" data-category="varanda" aria-label="Ampliar: Banheira junto &#224; parede de madeira"><img src="assets/img/galeria/miniaturas/varanda-37.webp" alt="Banheira junto &#224; parede de madeira" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-38.webp" data-category="varanda" aria-label="Ampliar: Banheira na varanda"><img src="assets/img/galeria/miniaturas/varanda-38.webp" alt="Banheira na varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-39.webp" data-category="varanda" aria-label="Ampliar: Banheira com vista para o jardim"><img src="assets/img/galeria/miniaturas/varanda-39.webp" alt="Banheira com vista para o jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-40.webp" data-category="varanda" aria-label="Ampliar: Banheira junto &#224; varanda"><img src="assets/img/galeria/miniaturas/varanda-40.webp" alt="Banheira junto &#224; varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-41.webp" data-category="varanda" aria-label="Ampliar: Vista da banheira e do jardim"><img src="assets/img/galeria/miniaturas/varanda-41.webp" alt="Vista da banheira e do jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-42.webp" data-category="varanda" aria-label="Ampliar: Detalhe da banheira na varanda"><img src="assets/img/galeria/miniaturas/varanda-42.webp" alt="Detalhe da banheira na varanda" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/varanda-43.webp" data-category="varanda" aria-label="Ampliar: Banheira vista da varanda"><img src="assets/img/galeria/miniaturas/varanda-43.webp" alt="Banheira vista da varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-44.webp" data-category="quarto" aria-label="Ampliar: Janela do quarto"><img src="assets/img/galeria/miniaturas/quarto-44.webp" alt="Janela do quarto" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-45.webp" data-category="quarto" aria-label="Ampliar: Interior do quarto junto &#224; porta"><img src="assets/img/galeria/miniaturas/quarto-45.webp" alt="Interior do quarto junto &#224; porta" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-46.webp" data-category="quarto" aria-label="Ampliar: Quarto com cama e janela"><img src="assets/img/galeria/miniaturas/quarto-46.webp" alt="Quarto com cama e janela" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-47.webp" data-category="quarto" aria-label="Ampliar: Cama e janela do quarto"><img src="assets/img/galeria/miniaturas/quarto-47.webp" alt="Cama e janela do quarto" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-48.webp" data-category="quarto" aria-label="Ampliar: Detalhe da janela do quarto"><img src="assets/img/galeria/miniaturas/quarto-48.webp" alt="Detalhe da janela do quarto" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-49.webp" data-category="quarto" aria-label="Ampliar: Cama e cabeceira do quarto"><img src="assets/img/galeria/miniaturas/quarto-49.webp" alt="Cama e cabeceira do quarto" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/quarto-50.webp" data-category="quarto" aria-label="Ampliar: Vista da cama e lumin&#225;ria do quarto"><img src="assets/img/galeria/miniaturas/quarto-50.webp" alt="Vista da cama e lumin&#225;ria do quarto" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/banheiro-51.webp" data-category="banheiro" aria-label="Ampliar: Bancada e espelho do banheiro"><img src="assets/img/galeria/miniaturas/banheiro-51.webp" alt="Bancada e espelho do banheiro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/banheiro-52.webp" data-category="banheiro" aria-label="Ampliar: Vista do banheiro"><img src="assets/img/galeria/miniaturas/banheiro-52.webp" alt="Vista do banheiro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/banheiro-53.webp" data-category="banheiro" aria-label="Ampliar: Detalhe do banheiro"><img src="assets/img/galeria/miniaturas/banheiro-53.webp" alt="Detalhe do banheiro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/banheiro-54.webp" data-category="banheiro" aria-label="Ampliar: Detalhe da parede do banheiro"><img src="assets/img/galeria/miniaturas/banheiro-54.webp" alt="Detalhe da parede do banheiro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/banheiro-55.webp" data-category="banheiro" aria-label="Ampliar: Espelho e bancada do banheiro"><img src="assets/img/galeria/miniaturas/banheiro-55.webp" alt="Espelho e bancada do banheiro" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-56.webp" data-category="paisagem" aria-label="Ampliar: Detalhe decorativo junto ao jardim"><img src="assets/img/galeria/miniaturas/paisagem-56.webp" alt="Detalhe decorativo junto ao jardim" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-57.webp" data-category="paisagem" aria-label="Ampliar: Paisagem vista atrav&#233;s do port&#227;o"><img src="assets/img/galeria/miniaturas/paisagem-57.webp" alt="Paisagem vista atrav&#233;s do port&#227;o" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-58.webp" data-category="paisagem" aria-label="Ampliar: Detalhe do port&#227;o e da paisagem"><img src="assets/img/galeria/miniaturas/paisagem-58.webp" alt="Detalhe do port&#227;o e da paisagem" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-59.webp" data-category="paisagem" aria-label="Ampliar: Detalhe decorativo e paisagem"><img src="assets/img/galeria/miniaturas/paisagem-59.webp" alt="Detalhe decorativo e paisagem" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/detalhes-60.webp" data-category="detalhes" aria-label="Ampliar: Detalhe de tecido e madeira"><img src="assets/img/galeria/miniaturas/detalhes-60.webp" alt="Detalhe de tecido e madeira" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/detalhes-61.webp" data-category="detalhes" aria-label="Ampliar: Detalhe de cadeira decorativa"><img src="assets/img/galeria/miniaturas/detalhes-61.webp" alt="Detalhe de cadeira decorativa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/detalhes-62.webp" data-category="detalhes" aria-label="Ampliar: Lumin&#225;ria no teto"><img src="assets/img/galeria/miniaturas/detalhes-62.webp" alt="Lumin&#225;ria no teto" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/detalhes-63.webp" data-category="detalhes" aria-label="Ampliar: Detalhe de lumin&#225;ria na parede"><img src="assets/img/galeria/miniaturas/detalhes-63.webp" alt="Detalhe de lumin&#225;ria na parede" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-64.webp" data-category="jardim" aria-label="Ampliar: Jardim visto de dentro da casa"><img src="assets/img/galeria/miniaturas/jardim-64.webp" alt="Jardim visto de dentro da casa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-65.webp" data-category="jardim" aria-label="Ampliar: Fogo aceso no jardim"><img src="assets/img/galeria/miniaturas/jardim-65.webp" alt="Fogo aceso no jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-66.webp" data-category="jardim" aria-label="Ampliar: Cadeiras junto ao fogo"><img src="assets/img/galeria/miniaturas/jardim-66.webp" alt="Cadeiras junto ao fogo" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-67.webp" data-category="paisagem" aria-label="Ampliar: Paisagem ao entardecer"><img src="assets/img/galeria/miniaturas/paisagem-67.webp" alt="Paisagem ao entardecer" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/paisagem-68.webp" data-category="paisagem" aria-label="Ampliar: Entardecer visto da &#225;rea externa"><img src="assets/img/galeria/miniaturas/paisagem-68.webp" alt="Entardecer visto da &#225;rea externa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-69.webp" data-category="jardim" aria-label="Ampliar: Fogo e cadeiras diante da paisagem"><img src="assets/img/galeria/miniaturas/jardim-69.webp" alt="Fogo e cadeiras diante da paisagem" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-70.webp" data-category="jardim" aria-label="Ampliar: Vista do fogo e das cadeiras"><img src="assets/img/galeria/miniaturas/jardim-70.webp" alt="Vista do fogo e das cadeiras" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-71.webp" data-category="fachada" aria-label="Ampliar: Port&#227;o ao entardecer"><img src="assets/img/galeria/miniaturas/fachada-71.webp" alt="Port&#227;o ao entardecer" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-72.webp" data-category="jardim" aria-label="Ampliar: Cadeiras de madeira no jardim"><img src="assets/img/galeria/miniaturas/jardim-72.webp" alt="Cadeiras de madeira no jardim" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-73.webp" data-category="jardim" aria-label="Ampliar: Fogo aceso entre cadeiras"><img src="assets/img/galeria/miniaturas/jardim-73.webp" alt="Fogo aceso entre cadeiras" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-74.webp" data-category="jardim" aria-label="Ampliar: Cadeiras e fogo junto &#224; casa"><img src="assets/img/galeria/miniaturas/jardim-74.webp" alt="Cadeiras e fogo junto &#224; casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-75.webp" data-category="jardim" aria-label="Ampliar: Fogo aceso diante da casa"><img src="assets/img/galeria/miniaturas/jardim-75.webp" alt="Fogo aceso diante da casa" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-76.webp" data-category="jardim" aria-label="Ampliar: Vista da casa e das cadeiras no jardim"><img src="assets/img/galeria/miniaturas/jardim-76.webp" alt="Vista da casa e das cadeiras no jardim" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/jardim-77.webp" data-category="jardim" aria-label="Ampliar: Cadeiras na &#225;rea externa"><img src="assets/img/galeria/miniaturas/jardim-77.webp" alt="Cadeiras na &#225;rea externa" width="1000" height="1500" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-78.webp" data-category="fachada" aria-label="Ampliar: Fachada da casa e varanda"><img src="assets/img/galeria/miniaturas/fachada-78.webp" alt="Fachada da casa e varanda" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                    <a class="photo-gallery__item" href="assets/img/galeria/fachada-79.webp" data-category="fachada" aria-label="Ampliar: Vista lateral da fachada"><img src="assets/img/galeria/miniaturas/fachada-79.webp" alt="Vista lateral da fachada" width="1500" height="1000" loading="lazy" decoding="async"></a>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+    <dialog class="gallery-viewer" aria-label="Visualiza&#231;&#227;o ampliada da galeria">
+        <div class="gallery-viewer__toolbar">
+            <p class="gallery-viewer__counter" aria-live="polite" aria-atomic="true"></p>
+            <button class="gallery-viewer__zoom" type="button" aria-pressed="false">Ampliar detalhes</button>
+            <button class="gallery-viewer__close" type="button" aria-label="Fechar visualiza&#231;&#227;o">&#215;</button>
+        </div>
+        <div class="gallery-viewer__stage">
+            <button class="gallery-viewer__previous" type="button" aria-label="Foto anterior">&#8592;</button>
+            <div class="gallery-viewer__viewport"><img class="gallery-viewer__image" alt=""></div>
+            <button class="gallery-viewer__next" type="button" aria-label="Pr&#243;xima foto">&#8594;</button>
+        </div>
+    </dialog>
+    <footer class="home-footer">
+        <div class="home-footer__body">
+            <div class="container home-footer__inner">
+                <div class="home-footer__brand"><p class="home-footer__subtitle">Casa de Campo</p><p class="home-footer__name">Decorelas</p></div>
+                <p class="home-footer__message">Um convite a desacelerar.</p>
+                <div class="home-footer__social" aria-label="Canais externos">
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>Instagram <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10M9.5 19.5v-6h5v6"/></svg>Airbnb <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <a href="https://wa.me/5547933844440" aria-label="Conversar pelo WhatsApp">WhatsApp</a>
+                </div>
+                <p class="home-footer__location">Bela Aliança<br>São Bento do Sul, SC</p>
+                <nav aria-label="Navegação do rodapé">
+                    <ul class="home-footer__nav">
+                        <li><a href="index.html">Casa</a></li>
+                        <li><a href="ambientes.html">Ambientes</a></li>
+                        <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

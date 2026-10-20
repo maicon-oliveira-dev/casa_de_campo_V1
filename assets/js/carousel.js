@@ -2,6 +2,7 @@
     "use strict";
     const carousel = document.querySelector(".hero-carousel");
     if (!carousel) return;
+    const hero = carousel.closest(".hero");
     const slides = Array.from(carousel.querySelectorAll(".hero-carousel__slide"));
     const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
     const status = carousel.querySelector("[data-carousel-status]");
@@ -14,7 +15,7 @@
     const description = content.querySelector("[data-hero-description]");
     const link = content.querySelector("[data-hero-link]");
     let activeIndex = 0;
-    let touchStart = 0;
+    let touchStart = null;
     let timer = null;
     let paused = motion.matches;
     let pointerInside = false;
@@ -107,6 +108,21 @@
         if (event.key === "ArrowLeft") { event.preventDefault(); showManualSlide(activeIndex - 1); }
         if (event.key === "ArrowRight") { event.preventDefault(); showManualSlide(activeIndex + 1); }
     });
-    carousel.addEventListener("touchstart", (event) => { touchStart = event.changedTouches[0].clientX; }, { passive: true });
-    carousel.addEventListener("touchend", (event) => { const distance = event.changedTouches[0].clientX - touchStart; if (Math.abs(distance) > 40) showManualSlide(activeIndex + (distance < 0 ? 1 : -1)); }, { passive: true });
+    hero.addEventListener("touchstart", (event) => {
+        if (event.touches.length !== 1 || event.target.closest(".hero-carousel__controls")) {
+            touchStart = null;
+            return;
+        }
+        touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    }, { passive: true });
+    hero.addEventListener("touchend", (event) => {
+        if (!touchStart || !event.changedTouches.length) return;
+        const dx = event.changedTouches[0].clientX - touchStart.x;
+        const dy = event.changedTouches[0].clientY - touchStart.y;
+        touchStart = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+            showManualSlide(activeIndex + (dx < 0 ? 1 : -1));
+        }
+    }, { passive: true });
+    hero.addEventListener("touchcancel", () => { touchStart = null; }, { passive: true });
 })();

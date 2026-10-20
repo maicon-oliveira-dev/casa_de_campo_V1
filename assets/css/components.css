@@ -73,12 +73,13 @@
 }
 
 .site-header--compact .menu-button {
-  width: 2.4rem;
-  height: 2.4rem
+  width: 2.75rem;
+  height: 2.75rem
 }
 
 .site-header--compact .mobile-menu {
-  inset: 3.75rem 0 0
+  top: 3.75rem;
+  max-height: calc(100dvh - 3.75rem)
 }
 
 .menu-button__icon,
@@ -127,14 +128,81 @@
 .mobile-menu {
   position: fixed;
   z-index: var(--z-menu);
-  inset: 4.75rem 0 0;
+  inset: 4.75rem 0 auto;
+  max-height: calc(100vh - 4.75rem);
+  max-height: calc(100dvh - 4.75rem);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: var(--color-canvas);
-  transition: inset var(--transition-default)
+  box-shadow: 0 12px 24px rgba(74,50,35,.12);
+  transition: top var(--transition-default)
+}
+
+@media (max-width: 63.999rem) {
+  .site-header {
+    background: var(--color-canvas);
+    backdrop-filter: none;
+  }
+
+  .site-header__inner {
+    position: relative;
+  }
+
+  .site-header__inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(3.5rem, calc(100vw - 15.5rem), 8rem);
+    aspect-ratio: 1200 / 220;
+    background: url("../img/brand/decorelas-portao-menu.svg") center / contain no-repeat;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .site-brand__name,
+  .site-header--compact .site-brand__name {
+    font-size: 1.15rem;
+  }
+
+  .site-brand__subtitle,
+  .site-header--compact .site-brand__subtitle {
+    font-size: .5rem;
+  }
+}
+
+.no-js-nav {
+  padding-block: var(--space-3);
+}
+
+.no-js-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 64rem) {
+  .no-js-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 63.999rem) and (prefers-reduced-motion: no-preference) {
+  .site-header__inner::before {
+    animation: mobile-ornament-enter 700ms ease-out both;
+  }
+
+  @keyframes mobile-ornament-enter {
+    from { opacity: 0; transform: translate(-50%, calc(-50% - 3px)); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+  }
 }
 
 .mobile-menu__inner {
-  padding-block: var(--space-5)
+  padding-block: var(--space-3)
 }
 
 .mobile-menu__list {
@@ -143,11 +211,18 @@
 
 .mobile-menu__link {
   display: flex;
-  min-height: 3.75rem;
+  min-height: 3rem;
   align-items: center;
   border-bottom: 1px solid var(--color-border);
   font-family: var(--font-display);
-  font-size: var(--text-xl)
+  font-size: 1.25rem
+}
+
+.mobile-menu__link[aria-current="page"],
+.mobile-menu__link[aria-current="location"] {
+  text-decoration: underline;
+  text-decoration-color: var(--color-terracotta);
+  text-underline-offset: .35em;
 }
 
 .button {
@@ -242,6 +317,8 @@
 
   .site-nav__link,
   .site-nav__cta {
+    padding-bottom: .2rem;
+    border-bottom: 1px solid transparent;
     font-family: var(--font-display);
     font-size: .82rem;
     letter-spacing: .09em;
@@ -257,9 +334,14 @@
   }
 
   .site-nav__cta {
-    padding-bottom: .2rem;
-    border-bottom: 1px solid var(--color-terracotta);
     color: var(--color-ink)
+  }
+
+  .site-nav__link[aria-current="page"],
+  .site-nav__link[aria-current="location"],
+  .site-nav__cta[aria-current="page"] {
+    border-bottom-color: var(--color-terracotta);
+    color: var(--color-ink);
   }
 
   .site-nav__cta:hover {

@@ -1,0 +1,234 @@
+.ambientes-choice {
+  display: grid;
+  background: var(--color-ink);
+}
+
+.ambientes-choice__panel {
+  position: relative;
+  display: grid;
+  min-height: 26rem;
+  overflow: hidden;
+  align-items: end;
+  color: var(--color-surface);
+}
+
+.ambientes-choice__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(35, 23, 16, .8), rgba(35, 23, 16, .1) 75%);
+  pointer-events: none;
+}
+
+.ambientes-choice__panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.ambientes-choice__panel:focus-visible {
+  outline-offset: -5px;
+  z-index: 2;
+}
+
+.ambientes-choice__panel:hover img,
+.ambientes-choice__panel:focus-visible img {
+  transform: scale(1.025);
+}
+
+.ambientes-choice__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding: clamp(2rem, 5vw, 5rem);
+}
+
+.ambientes-choice__eyebrow,
+.visit__label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.ambientes-choice__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+}
+
+.ambientes-choice__action,
+.visit__back,
+.visit__next a {
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--color-terracotta);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.visit__header {
+  padding-block: var(--space-8);
+}
+
+.visit__back {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.visit__header h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+}
+
+.visit__intro {
+  max-width: 36rem;
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.visit__chapters {
+  position: relative;
+  display: grid;
+  gap: clamp(5rem, 10vw, 9rem);
+}
+
+.visit__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--color-terracotta);
+  transform: scaleY(var(--visit-progress, 1));
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.visit__chapter {
+  position: relative;
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  margin-left: clamp(1.5rem, 4vw, 4rem);
+}
+
+.visit__chapter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * clamp(1.5rem, 4vw, 4rem) - 3px);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  transition: transform 400ms ease;
+}
+
+.visit__chapter.is-active::before {
+  transform: scale(1.8);
+}
+
+.visit__chapter img {
+  width: 100%;
+  height: auto;
+  max-height: 42rem;
+  object-fit: cover;
+}
+
+.visit__chapter img[width="1000"] {
+  max-width: 30rem;
+  justify-self: center;
+}
+
+.visit__copy {
+  max-width: 26rem;
+}
+
+.visit__label {
+  margin-bottom: var(--space-4);
+  color: var(--color-ink-muted);
+}
+
+.visit__copy h2 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.visit__copy > p:last-child {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.visit__next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  padding-block: var(--space-8);
+}
+
+.visit__next a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .ambientes-choice {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ambientes-choice__panel {
+    min-height: min(80vh, 48rem);
+  }
+
+  .visit__chapter {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr);
+    gap: clamp(3rem, 7vw, 7rem);
+  }
+
+  .visit__chapter:nth-of-type(even) {
+    grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  }
+
+  .visit__chapter:nth-of-type(even) img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .visit__chapter:nth-of-type(even) .visit__copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .visit__chapter:nth-of-type(3) {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, .6fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visit__chapter::before {
+    transition: none;
+  }
+
+  .visit__line {
+    transform: none;
+  }
+  .ambientes-choice__panel img {
+    transition: none;
+  }
+
+  .ambientes-choice__panel:hover img,
+  .ambientes-choice__panel:focus-visible img {
+    transform: none;
+  }
+}

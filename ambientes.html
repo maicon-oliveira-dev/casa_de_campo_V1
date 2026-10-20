@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/ambientes.css">
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
 </head>
@@ -40,20 +41,37 @@
                 <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html" aria-current="page">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html">Reservas</a></li>
             </ul></div>
         </nav>
+        <noscript>
+            <style>.menu-button { display: none; } .hero-carousel__controls { display: none; }</style>
+            <nav class="container no-js-nav" aria-label="Navega&#231;&#227;o principal"><a href="index.html">A casa</a><a href="ambientes.html">Ambientes</a><a href="galeria.html">Galeria</a><a href="reservas.html">Reservas</a></nav>
+        </noscript>
     </header>
-    <main id="main-content" tabindex="-1">
-        <section class="spaces section" id="ambientes" aria-labelledby="ambientes-title">
-            <div class="container"><div class="section-heading"><p class="eyebrow">Ambientes</p><h1 id="ambientes-title">Cenas para habitar sem pressa.</h1></div>
-                <div class="spaces__grid">
-                    <article class="space-card space-card--wide"><img src="assets/img/gallery/cozinha.jpg" alt="Cozinha da casa com janela ampla, armários e bancada" width="1200" height="800" loading="lazy"><div><h3>Cozinha</h3><p>Linhas acolhedoras e luz que atravessa o dia.</p></div></article>
-                    <article class="space-card"><img src="assets/img/gallery/quarto.jpg" alt="Quarto com cama de estrutura escura e janela voltada ao exterior" width="900" height="600" loading="lazy"><div><h3>Quarto</h3><p>Um enquadramento calmo entre interior e paisagem.</p></div></article>
-                    <article class="space-card"><img src="assets/img/gallery/sala.jpg" alt="Sala com sofá claro, tapete de fibra e luz natural" width="667" height="1000" loading="lazy"><div><h3>Sala</h3><p>Texturas naturais para desacelerar o olhar.</p></div></article>
-                    <article class="space-card space-card--wide"><img src="assets/img/details/area-externa.jpg" alt="Detalhe de área externa com pedra, madeira e água" width="1200" height="800" loading="lazy"><div><h3>Área externa</h3><p>Um detalhe da casa que aproxima matéria e paisagem.</p></div></article>
-                </div>
-                <!-- A curadoria final de ambientes será concluída após confirmação dos proprietários. -->
-            </div>
-        </section>
+    <main id="main-content" tabindex="-1" class="ambientes-choice">
+        <h1 class="visually-hidden">Explore os ambientes</h1>
+        <a class="ambientes-choice__panel" href="interior.html"><img src="assets/img/ambientes/interior-cozinha.webp" alt="" width="1500" height="1000" fetchpriority="high"><span class="ambientes-choice__content"><span class="ambientes-choice__eyebrow">Descubra a casa</span><span class="ambientes-choice__title">Interior</span><span class="ambientes-choice__action">Explorar interior <span aria-hidden="true">&#8599;</span></span></span></a>
+        <a class="ambientes-choice__panel" href="exterior.html"><img src="assets/img/ambientes/exterior-jardim.webp" alt="" width="1500" height="1000" loading="lazy"><span class="ambientes-choice__content"><span class="ambientes-choice__eyebrow">Descubra a paisagem</span><span class="ambientes-choice__title">Exterior</span><span class="ambientes-choice__action">Explorar exterior <span aria-hidden="true">&#8599;</span></span></span></a>
     </main>
-    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+    <footer class="home-footer">
+        <div class="home-footer__body">
+            <div class="container home-footer__inner">
+                <div class="home-footer__brand"><p class="home-footer__subtitle">Casa de Campo</p><p class="home-footer__name">Decorelas</p></div>
+                <p class="home-footer__message">Um convite a desacelerar.</p>
+                <div class="home-footer__social" aria-label="Canais externos">
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>Instagram <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10M9.5 19.5v-6h5v6"/></svg>Airbnb <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <a href="https://wa.me/5547933844440" aria-label="Conversar pelo WhatsApp">WhatsApp</a>
+                </div>
+                <p class="home-footer__location">Bela Aliança<br>São Bento do Sul, SC</p>
+                <nav aria-label="Navegação do rodapé">
+                    <ul class="home-footer__nav">
+                        <li><a href="index.html">Casa</a></li>
+                        <li><a href="ambientes.html" aria-current="page">Ambientes</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/reservas.css">
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
 </head>
@@ -40,10 +41,58 @@
                 <li><a class="mobile-menu__link" href="index.html">A casa</a></li><li><a class="mobile-menu__link" href="ambientes.html">Ambientes</a></li><li><a class="mobile-menu__link" href="galeria.html">Galeria</a></li><li><a class="mobile-menu__link" href="reservas.html" aria-current="page">Reservas</a></li>
             </ul></div>
         </nav>
+        <noscript>
+            <style>.menu-button { display: none; } .hero-carousel__controls { display: none; }</style>
+            <nav class="container no-js-nav" aria-label="Navega&#231;&#227;o principal"><a href="index.html">A casa</a><a href="ambientes.html">Ambientes</a><a href="galeria.html">Galeria</a><a href="reservas.html">Reservas</a></nav>
+        </noscript>
     </header>
     <main id="main-content" tabindex="-1">
-        <section class="reservations section" id="reservas" aria-labelledby="reservas-title"><div class="container reservations__inner"><p class="eyebrow">Reservas</p><h1 id="reservas-title">Quando quiser saber mais, estamos por aqui.</h1><p>Consulte a disponibilidade e receba as informações da sua próxima estadia.</p><!-- Integração com canal oficial de reservas será inserida após confirmação dos proprietários. --></div></section>
+        <section class="booking" id="reservas" aria-labelledby="reservas-title">
+            <div class="container booking__layout">
+                <div class="booking__content">
+                    <p class="eyebrow booking__eyebrow">Reservas</p>
+                    <h1 id="reservas-title">Seu tempo na casa começa aqui.</h1>
+                    <p class="booking__intro">Entre em contato para consultar uma estadia na Casa de Campo Decorelas.</p>
+                    <div class="booking__actions" aria-label="Canais de contato">
+                        <a class="booking__action booking__action--primary" href="https://wa.me/5547933844440" target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp <span aria-hidden="true">↗</span><span class="visually-hidden"> (abre em uma nova aba)</span></a>
+                        <div class="booking__pending">
+                            <button class="booking__action booking__action--secondary" type="button" disabled aria-describedby="airbnb-pending">Ver anúncio no Airbnb</button>
+                            <p id="airbnb-pending">Link do anúncio ainda não disponível.</p>
+                        </div>
+                    </div>
+                    <p class="booking__note">Datas, valores e disponibilidade são confirmados pelo canal escolhido.</p>
+                    <div class="booking__location">
+                        <p class="booking__location-label">Localização</p>
+                        <p>Bela Aliança, São Bento do Sul, Santa Catarina</p>
+                    </div>
+                </div>
+                <figure class="booking__image">
+                    <img src="assets/img/narrativa/fachada.jpg" alt="Fachada da casa com varanda e jardim." width="1500" height="1000" decoding="async">
+                </figure>
+            </div>
+        </section>
     </main>
-    <footer class="site-footer"><div class="container site-footer__inner"><p class="site-footer__brand">Decorelas Casa de Campo</p><p class="site-footer__note">Apresentação em desenvolvimento.</p></div></footer>
+    <footer class="home-footer">
+        <div class="home-footer__body">
+            <div class="container home-footer__inner">
+                <div class="home-footer__brand"><p class="home-footer__subtitle">Casa de Campo</p><p class="home-footer__name">Decorelas</p></div>
+                <p class="home-footer__message">Um convite a desacelerar.</p>
+                <div class="home-footer__social" aria-label="Canais externos">
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>Instagram <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <button type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10M9.5 19.5v-6h5v6"/></svg>Airbnb <span class="visually-hidden">— link ainda não disponível</span></button>
+                    <a href="https://wa.me/5547933844440" aria-label="Conversar pelo WhatsApp">WhatsApp</a>
+                </div>
+                <p class="home-footer__location">Bela Aliança<br>São Bento do Sul, SC</p>
+                <nav aria-label="Navegação do rodapé">
+                    <ul class="home-footer__nav">
+                        <li><a href="index.html">Casa</a></li>
+                        <li><a href="ambientes.html">Ambientes</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

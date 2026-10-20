@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    const desktopMedia = window.matchMedia("(min-width: 48rem)");
+    const desktopMedia = window.matchMedia("(min-width: 64rem)");
     const menuButton = document.querySelector(".menu-button");
     const mobileMenu = document.querySelector("#mobile-menu");
 
@@ -79,6 +79,13 @@
     });
 
     document.addEventListener("keydown", handleMenuKeydown);
+
+    document.addEventListener("click", (event) => {
+        if (!isOpen() || mobileMenu.contains(event.target) || menuButton.contains(event.target)) return;
+        event.preventDefault();
+        event.stopPropagation();
+        setMenuState(false, { returnFocus: true });
+    }, true);
 
     desktopMedia.addEventListener("change", (event) => {
         if (event.matches && isOpen()) {
